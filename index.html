@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <style>
+        /*This is the CSS of this project and it mainly contain the class attribute*/
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-around;
+            box-sizing: border-box; 
+            border-top: 90px;
+        }
+        #full-logo{
+            width: 290px;
+            padding-top: 10px
+        }
+        nav{
+            padding: 10px;
+            color: #00b39b;
+            gap: 10em;
+            justify-content: space-around;
+        }
+        #logo2{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40px;
+        }
+        .next{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            box-sizing: border-box;   
+        }
+        .write{
+            box-sizing: border-box;
+            flex: 1;
+            color: #00b39b;  
+        }
+        .remote{            
+            display: flex;                  
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            padding: 1.375em 1.25em 0;
+            margin: 3.75rem auto 2.5rem;
+            max-width: 1015px;
+            padding: 0 20px;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .remote1{
+            flex-wrap: wrap;
+            flex-direction: column;
+            border-left: 15px;
+            border-radius: 10px;
+            height: 350px;
+            flex: 2;
+            color: white;
+        }
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            flex: 1;
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+            justify-content: space-around;
+        }
+        .container > .item {
+            width: 300px;
+            height: 30px;
+            margin: 20px;
+        }
+        .fifth{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .smart{
+            background: rgb(208,250,244);
+            height: 595px;
+            width: 640px;
+            padding: 20px;
+        }
+        .myguy{
+            display: grid;
+            background: rgb(255,255,255);
+            border-radius: 2px; 
+        }
+        .smart1{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 50px;
+            background: rgb(208,250,244);
+        }
+        .biro{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-around;
+            box-sizing: border-box;
+            margin-left: 340px;
+            width: 650px;
+            justify-items: center;            
+        }
+        .paper{
+            height: 341px;
+            width: 311px;
+            background: rgb(255,255,255);
+            margin-top: 20px;
+        }
+        .telephone{
+            display: flex;
+            box-sizing: border-box;
+            background: white;
+        }
+        .earphone{
+            flex: 1;
+            height: 40px;
+            width: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="container">
+        <!--This is the Header mainly used in HTML5, It Contains the logo and a anchor tags -->
+
+        <div class="item1">
+            <img src="res/Full-Logo.png" id="full-logo" alt="logo">
+        </div>
+
+        <div class="item2">
+            <nav>
+                <a style="color:#00b39b;" href="#">About Us</a>
+                <span style="color: #00b39b;" href="#">Career</span>
+                <span>Department</span>
+            </nav>
+        </div>  
+
+    </header>
+    <br> <br> <br> <br>
+
+    <main>
+        <!--This the main part of this document with the attribute main, it contains classes and div's-->
+        <div class="logo">
+            <img src="res/logo 2.png" id="logo2" alt="logo 2">
+            <p style="text-align: center; color: #00b39b; font-style: normal; font-stretch: semi-expanded; 
+            font-size: xx-large; word-spacing: 5px;">Making the healthcare experience more human</p>
+        </div>
+
+        <div class="next">
+            <div class="write">
+                <p style="padding-left: 44%;">We want patients to find the perfect doctor and <br> book an appointment in the most easy way. <br> 
+                    The patient journey should be enjoyable, and <br> that's why we are always next to them: to help <br> 
+                    them find the best possible care. Anytime, <br> anywhere.</p>
+            </div>
+            <div class="write">
+                <p style="padding-left: 15px;">We also help doctors to better manage their <br> practice and build their online reputation. With <br> our integrated end-to-end solution, doctors are <br> able not only to improve their online presence, <br> but also to devote their time to what really <br> matters: their patients.</p>
+
+            </div>
+        </div>
+
+    </main>
+
+    <main class="remote">
+        <!--This part of the main contains icons, dropdown lists/options-->
+
+        <div class="remote1" style="background-color: rgb(0,204,177);">
+            <img src="res/icon-patients.svg" alt="icon" style="padding-left: 40px; padding-top: 40px;" >
+            <h3 style="padding-left: 40px;">For Patients</h3>
+            <p style="padding-left: 40px;">Find a doctor, book a <br> visit and solve any <br>health-related doubt</p>
+            <br>
+            <br>
+            <br>
+
+            <select name="Choose Country" id="Choose" style="text-decoration: underline; margin-left: 40px; margin-top: 40px; color: #00b39b;">
+                <option value="Choose Country">Choose Country</option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Niger">Niger</option>
+                <option value="Ghana">Ghana</option>
+                <option value="Morocco">Morocco</option>
+                <option value="Japan">Japan</option>
+                <option value="United States">United States</option>
+                <option value="Russia">Russia</option>
+            </select>
+        </div>
+
+        <div class="remote1" style="background-color: rgb(61,131,223);">
+            <img src="res/icon-doctors.svg" alt="icon-doctors" style="padding-left: 40px; padding-top: 40px;">
+            <h3 style="padding-left: 40px;">For Doctors</h3>
+
+            <p style="padding-left: 40px;">
+                Save time <br>managing visits and <br>cut no-shows by <br>half
+            </p>
+
+            <br> <br> <br> <br>
+            
+            <select name="Choose Country" id="Choose" style="text-decoration: underline;
+            margin-bottom: 0px; margin-left: 40px; color:rgb(61,131,223) ;">
+            <option value="Choose Country">Choose Country</option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Niger">Niger</option>
+                <option value="Ghana">Ghana</option>
+                <option value="Morocco">Morocco</option>
+                <option value="Japan">Japan</option>
+                <option value="United States">United States</option>
+                <option value="Russia">Russia</option>
+            </select>
+        </div>
+
+        <div class="remote1" style="background-color:rgb(27,39,52);">
+        <img src="res/icon-clinics.svg" alt="icon-clinics" style="padding-left:40px; padding-top:40px;">
+        <h3 style="padding-left: 40px;">For Clinics</h3>
+        <p style="padding-left: 40px;">Deliver an exceptional <br> patient experience in <br>your clinic</p>
+        <br> <br>
+        <select name="Choose Country" id="Choose" style="text-decoration: underline;
+            margin-bottom: 0px; margin-left: 40px; color:rgb(27,39,52);">
+            <option value="Choose Country">2 to 20 Specialists</option>
+            <option value="Saudi Arabia">Saudi Arabia</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Niger">Niger</option>
+            <option value="Ghana">Ghana</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Japan">Japan</option>
+            <option value="United States">United States</option>
+            <option value="Russia">Russia</option>
+        </select>
+        <br> <br> <br>
+
+        <select name="Choose Country" id="Choose" style="text-decoration: underline;
+                 margin-left: 40px; color:rgb(27,39,52);">
+             <option value="Choose Country">More than 20 Specialists</option>
+             <option value="Saudi Arabia">Saudi Arabia</option>
+             <option value="Nigeria">Nigeria</option>
+             <option value="Niger">Niger</option>
+             <option value="Ghana">Ghana</option>
+             <option value="Morocco">Morocco</option>
+             <option value="Japan">Japan</option>
+             <option value="United States">United States</option>
+             <option value="Russia">Russia</option>
+         </select>
+
+        </div>
+    </main>
+
+    <div class="container">
+        <!--This is another section of this project that contains the icons and logos-->
+
+        <div class="item" style="width: 100px;height: 100px;">
+          <p style="color: #00b39b;font-size: x-large;">We are a global company <br>
+           with local culture</p>
+        </div>
+        <div class="item" style="width: 400px; height: 250px; justify-content: space-around; margin-left: 40px;">
+          <img src="res/znanylekarz.png" alt="icon" width="100px">
+          <img src="res/Doctoralia.png" alt="icon" width="100px">
+          <img src="res/MioDottore.png" alt="icon" width="100px"> <br> <br>
+          <img src="res/doktortakvimi.png" alt="icon" width="100px">
+          <img src="res/Znamylekar.jpg" alt="icon" width="100px">
+          <img src="res/logo-jameda.svg" alt="icon" width="100px"> <br> <br>
+          <img src="res/logo-tuotempo.svg" alt="icon" width="100px">
+          <img src="res/logo-gipo-primary.svg" alt="icon" width="100px">
+          <img src="res/logo-clinicloud.svg" alt="icon"> <br> <br> <br>
+          <img src="res/logo-feegow.svg" alt="" width="100px">
+        </div>
+    </div>
+    <br>
+    
+    <div class="fifth">
+        <div class="smart" style="align-items: center;">
+          <h1 style="padding-left: 100px;">The world's biggest <br>
+            healthcare platform
+          </h1>
+          <p style="padding-left:100px;">We work from 9 offices all over the world, bringing Docplanner <br>
+            Group to life in 13 countries.</p> <br> <br> <br>
+          <img src="res/logocropped.png" alt="cropped" style="padding-left: 50px;">
+        </div>
+    
+        <div class="smart1">
+        <div class="myguy" style="height: 220px; width: 200px; margin-top: 20px;">
+          <img src="res/flag.png" alt="logo" style="margin-left: auto; margin-right: auto; padding-top: 20px;">
+          <h3 style="text-align: center;">Leader in 13 <br>countries</h3>
+          <p style="font-size: 10px; text-align: center;">Poland, Brazil, Mexico, Spain, Italy, Germany, <br> Turkey,     Colombia, Czech Republic, Portugal, <br>Argentina, Peru and Chile</p>
+        </div> <br>
+    
+        <div class="myguy" style="height: 220px; width: 200px;">
+           <img src="res/visits.png" alt="logo" style="margin-left: auto; margin-right: auto; padding-top: 20px;">
+           <p style="text-align: center;">15,000,000 appointments <br> <br>booked last month </p> 
+        </div> <br>
+    
+        <div class="myguy" style="height: 220px; width: 200px; margin-top: 30px;">
+           <img src="res/patients.png" alt="logo" style="margin-right: auto; margin-left: auto; padding-top: 20px;">
+           <p style="text-align: center;">90,000,000  <br>patients <br> <br>
+            visit our websites each month</p>
+        </div> <br>
+    
+        <div class="myguy" style="height: 220px; width: 200px; margin-top: 20px;">
+            <img src="res/doctors.png" alt="logo" style="margin-right: auto; margin-left: auto; padding-top: 20px;">
+            <p style="text-align: center;">210,000 active <br>doctors <br> <br>
+            trust our solutions</p>
+        </div>
+        </div>
+      
+      </div>
+
+    <br> <br> <br> <br>
+
+    <h1 style="text-align: center; color: #00b39b;">Improve the lives of millions. <br>
+     Change yours forever.
+    </h1>
+
+    <p style="text-align: center;color: #00b39b;">More than 2800 team mates share our same vision, goals and passion.    <br>
+        With offices in Warsaw, Barcelona, Munich, Istanbul, Rome, Rio, Bologna, <br>
+        Mexico City and Curitiba, our search for great talent never stops.
+    </p> <br> <br> <br> <br>
+
+    <div class="biro">
+
+        <!--This part of this project contains flexbox and also grid in the earlier ones. it also contain images and buttons-->
+        <div class="paper">
+            <div>
+                <img src="res/warsaw.png" alt="image">
+            </div>
+            <div class="telephone" style="margin-top: 20px;">
+                <div class="earphone">
+                    <p style="margin-left: 10px;">Warsaw</p>
+                </div>
+                <div class="earphone">
+                    <button class="btn btn-primary" style="margin-top: 5px;" style="margin-right: 25px;">SEE OPENINGS</button>
+                </div>
+            </div>
+        </div>
+        <div class="paper">
+            <div>
+                <img src="res/barcelona.png" alt="image">
+            </div>
+            <div class="telephone" style="margin-top: 20px;">
+                <div class="earphone">
+                    <p style="margin-left: 10px;">Barcelona</p>
+                </div>
+                <div class="earphone">
+                    <button class="btn btn-primary" style="margin-top: 5px;" style="margin-right: 25px;">SEE OPENINGS</button>
+                </div>
+            </div>
+        </div>
+        </div>
+       
+    </div>
+    <div class="biro">
+        <div class="paper"><div>
+            <img src="res/munich.png" alt="image">
+        </div>
+        <div class="telephone" style="margin-top: 20px;">
+            <div class="earphone">
+                <p style="margin-left: 10px;">Munich</p>
+            </div>
+            <div class="earphone">
+                <button class="btn btn-primary" style="margin-top: 5px;" style="margin-right: 25px;">SEE OPENINGS</button>
+            </div>
+            
+
+        </div></div>
+        <div class="paper">
+            <div>
+                <img src="res/istanbul.png" alt="image">
+            </div>
+            <div class="telephone" style="margin-top: 20px;">
+                <div class="earphone">
+                    <p style="margin-left: 10px;">Istanbul</p>
+                </div>
+                <div class="earphone">
+                    <button class="btn btn-primary" style="margin-top: 5px;" style="margin-right: 25px;">SEE OPENINGS</button>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+        
+               
+
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="biro">
+        <div class="paper"><div>
+            <img src="res/rome.png" alt="image">
+        </div>
+        <div class="telephone" style="margin-top: 20px;">
+            <div class="earphone">
+                <p style="margin-left: 10px;">Rome</p>
+            </div>
+            <div class="earphone">
+                <button class="btn btn-primary" style="margin-top: 5px;" style="margin-right: 25px;">SEE OPENINGS</button>
+            </div>
+            
+
+        </div></div>
+        <div class="paper">
+            <div>
+                <img src="res/bologna.png" alt="image">
+            </div>
+            <div class="telephone" style="margin-top: 20px;">
+                <div class="earphone">
+                    <p style="margin-left: 10px;">Bologna</p>
+                </div>
+                <div class="earphone">
+                    <button class="btn btn-primary" style="margin-top: 5px;" style="margin-right: 25px;">SEE OPENINGS</button>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+    <div class="biro">
+        <div class="paper"><div>
+            <img src="res/curitiba.png" alt="image">
+        </div>
+        <div class="telephone" style="margin-top: 20px;">
+            <div class="earphone">
+                <p style="margin-left: 10px;">Curitiba</p>
+            </div>
+            <div class="earphone">
+                <button class="btn btn-primary" style="margin-top: 5px;" style="margin-right: 25px;">SEE OPENINGS</button>
+            </div>
+            
+
+        </div></div>
+        <div class="paper">
+            <div>
+                <img src="res/rio-janeiro.png" alt="image">
+            </div>
+            <div class="telephone" style="margin-top: 20px;">
+                <div class="earphone">
+                    <p style="margin-left: 10px;">Rio De Janeiro</p>
+                </div>
+                <div class="earphone">
+                    <button class="btn btn-primary" style="margin-top: 5px;" style="margin-right: 25px;">SEE OPENINGS</button>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+    <div class="biro">
+        <div class="paper">
+            <div>
+                <img src="res/mexico-city.png" alt="image">
+            </div>
+            <div class="telephone" style="margin-top: 20px;">
+                <div class="earphone">
+                    <p style="margin-left: 10px;">Mexico City</p>
+                </div>
+                <div class="earphone">
+                    <button class="btn btn-primary" style="margin-top: 5px;" style="margin-right: 25px;">SEE OPENINGS</button>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+
+    <br> <br> <br> <br> <br>
+
+    
+    <footer style="text-align: center;">
+        <!--This is the footer of this project with anchor tags and paragraphs too-->
+        <div>
+            <h2>Sounds interesting? Join us now!</h2>
+            <br> 
+            <button class="btn btn-primary">SEE ALL CURRENT OPENINGS </button>
+            <br> <br> <br> <br> 
+    
+        </div>
+        
+        <div>
+        
+            <p style="color: #00b39b;">We are leaders in 13 countries:
+                <a href="#">Poland,</a> <a href="#">Turkey</a> <a href="#">Italy,</a> <a href="#">Germany,</a> <a href="#">Czech Republic,</a> <a href="#">Portugal,</a>  <a href="#">Mexico,</a> <a href="#">Columbia,</a>
+                <a href="#">Brazil,</a> <a href="#">Argentina,</a> <a href="#">Peru</a> and <a href="#">Chile.</a> <br>
+                <p style="text-align: center; color: #00b39b;">This site uses cookies to deliver services in accordance with this Privacy Policy. You can specify the conditions for storing or accessing cookies on your browser.
+                    www.docplanner.com © 2023</p>
+            </>
+              
+        </div>
+
+        <div>
+
+        </div>
+    </footer>
+    
+</body>
+</html> 
